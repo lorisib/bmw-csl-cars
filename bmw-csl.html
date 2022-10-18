@@ -18,6 +18,7 @@
           <span></span>
         </label> 
         <ul class="menu__box">
+            <li><img class="logo-menus" src="../bmw csl cars/assets/images/default-acc-logo22.png" alt="acc logo"width="56px"></li>
             <span><i class="fa-solid  fa-magnifying-glass"></i></span>
             <input class="search-menu" type="search"placeholder="Search...">
             <li><a class="menu__item" href="#">Magazine</a></li>
@@ -26,7 +27,6 @@
             <li><a class="menu__item" href="#">Driving experience</a></li>
             <li><a class="menu__item" href="#">Settings</a></li>
         </ul>
-    </div>
     </div>
     <main>
         <div class="entry-text">
@@ -57,7 +57,8 @@
                 <h3>BMW CSL M4 2023</h3>
                 <p>The new M4 CSL is an exclusive model, with BMW planning to produce just 1,000 examples for the entire world. The coupe receives improvements over the M4 Competition, making it the fastest series-production BMW ever to lap the Nürburgring's Nordschleife circuit. It took the M4 CSL just 7:20.2 to complete a lap.</p>
             </div>
-            <img class="foto2023" src="../bmw csl cars/assets/images/2023_bmw_m4-cls.png" alt="bmw csl 2023">
+            <img class="foto2023" src="../bmw csl cars/assets/images/2023_bmw_m4-cls.png" alt="bmw csl 2023" onclick="play()">
+            <audio id="audio" src="./assets/sounds/2022-bmw-m4-competition-stock.mp3"></audio>
         </div>
         <div class="newcsl">
             <div class="m4csl-text">
@@ -76,7 +77,8 @@
                 <h3>BMW CSL M3 2003</h3>
                 <p>The BMW M3 CSL (Coupe Sport Leichtbau) was a limited edition version of the M3, with only 1,400 cars being produced for its 2004 model year run.The CSL was never released into the North American market, and was only available in two colours : Silver Grey Metallic and Black Sapphire Metallic.</p>
             </div>
-            <img class="foto2003" src="../bmw csl cars/assets/images/bmw_m3_csl_bmwyedek.png" alt="bmw csl 2003">
+            <img class="foto2003" src="../bmw csl cars/assets/images/bmw_m3_csl_bmwyedek.png" alt="bmw csl 2003" onclick="play1()">
+            <audio id="audio1" src="./assets/sounds/bmw-m3-csl-rev_ZbgR9irU.mp3"></audio>
         </div>
         <div class="newcsl">
             <div class="m4csl-text">
@@ -95,7 +97,8 @@
                 <h3>BMW 3.0 CSL 1974</h3>
                 <p>From 1973 onwards, the BMW 3.0 CSL was the most powerful street version of the series. The engineers achieved their ambition of a more competitive character in the third stage of development via greater capacity, output, extremely lightweight construction and a striking aero package. And they got the nickname “Batmobile” for free from BMW fans.</p>
             </div>
-            <img class="foto30" src="../bmw csl cars/assets/images\/AnyConv.com__MOT_XB1_BMW_25_30.png" alt="bmw 3.0 csl">
+            <img class="foto30" src="../bmw csl cars/assets/images\/AnyConv.com__MOT_XB1_BMW_25_30.png" alt="bmw 3.0 csl" onclick="play2()">
+            <audio id="audio2" src="./assets/sounds/bmw-e9-30-csl-engine-sound.mp3"></audio>
     </div>
     <div class="newcsl">
         <div class="m4csl-text ">
@@ -114,7 +117,8 @@
             <h3>BMW 3.0 CSL hommage 2015</h3>
             <p>In 2015 BMW introduced the 3.0 CSL Hommage concept car at Concorso d'Eleganza Villa d'Este. The car is a tribute to the 1972 3.0 CSL, a homologation special built to make the car eligible for racing in the European Touring Car Championship at that time</p>
         </div>
-        <img class="fotohomage" src="../bmw csl cars/assets/images\/homage-.png" alt="bmw 3.0 csl">
+        <img class="fotohomage" src="../bmw csl cars/assets/images\/homage-.png" alt="bmw 3.0 csl" onclick="play3()">
+        <audio id="audio3" src="./assets/sounds/bmw-30-csl-hommage-sound.mp3"></audio>
     </div>
     <div class="gems">
         <div class="gems-content">
@@ -182,10 +186,14 @@
                     </div>
                     <div class="bid-info">
                         <h3>BMW E46 M3 CSL 2004 </h3>
-                        <span>Dersden,Germany</span>
+                        <p>Dersden,Germany</p>
                         <p>80,000km</p>
                         <p>$113,500</p>
-                        <input class="buy-now" type="submit"value="Buy Now">
+                        <button onclick="llog_m_payment1()">buy now</button>
+                        <button class="like__btn">
+                            <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                            <span id="count">1200</span> Like
+                         </button>
                     </div>
                 </div>    
             </div>
@@ -196,10 +204,14 @@
                     </div>
                     <div class="bid-info">
                         <h3>BMW 3.0 CSL hommage 2015</h3>
-                        <span>Freiburg,Germany</span>
+                        <p>Freiburg,Germany</p>
                         <p>38,340km</p>
                         <p>$713,500</p>
-                        <input class="buy-now" type="submit"value="Buy Now">
+                        <button onclick="llog_m_payment2()" id="btn">buy now</button>
+                        <button class="like__btn1">
+                            <span id="icon1"><i class="far fa-thumbs-up"></i></span>
+                            <span id="count1">110</span> Like
+                         </button>
                     </div>
                 </div>    
             </div>
@@ -210,10 +222,14 @@
                     </div>
                     <div class="bid-info">
                         <h3>BMW 3.0 CSL 1972</h3>
-                        <span>New Jeresy,USA</span>
+                        <p>New Jeresy,USA</p>
                         <p>103,050km</p>
                         <p>$513,500</p>
-                        <input class="buy-now" type="submit"value="Buy Now">
+                        <button onclick="llog_m_payment3()" id="btn">buy now</button>
+                        <button class="like__btn2">
+                            <span id="icon2"><i class="far fa-thumbs-up"></i></span>
+                            <span id="count2">340</span> Like
+                         </button>
                     </div>
                 </div>    
             </div>
@@ -225,9 +241,12 @@
                     <div class="bid-info">
                         <h3>BMW M4 CSL 2023 </h3>
                         <p>Nordschleife-7:20.207 minutes</p>
-
                         <p>$139,900</p>
-                        <input class="buy-now" type="submit"value="Pre-order">
+                        <button onclick="llog_m_payment4()" id="btn">buy now</button>
+                        <button class="like__btn3">
+                            <span id="icon3"><i class="far fa-thumbs-up"></i></span>
+                            <span id="count3">444</span> Like
+                         </button>
                     </div>
                 </div>    
             </div>
@@ -238,10 +257,14 @@
                     </div>
                     <div class="bid-info">
                         <h3>BMW E46 M3 CSL 2004 </h3>
-                        <span>Prishtina,Kosovo</span>
+                        <p>Prishtina,Kosovo</p>
                         <p>120,000km</p>
                         <p>$103,500</p>
-                        <input class="buy-now" type="submit"value="Buy Now">
+                        <button onclick="llog_m_payment5()" id="btn">buy now</button>
+                        <button class="like__btn4">
+                            <span id="icon4"><i class="far fa-thumbs-up"></i></span>
+                            <span id="count4">666</span> Like
+                         </button>
                     </div>
                 </div>    
             </div>
@@ -252,16 +275,38 @@
                     </div>
                     <div class="bid-info">
                         <h3>BMW 3.0 CSL 1972</h3>
-                        <span>Madrid,Spain</span>
+                        <p>Madrid,Spain</p>
                         <p>120,210km</p>
                         <p>$723,750</p>
-                        <input class="buy-now" type="button"value="Buy Now">
+                        <button onclick="llog_m_payment6()" id="btn">buy now</button>
+                        <button class="like__btn5">  
+                            <span id="icon5"><i class="far fa-thumbs-up"></i></span>
+                            <span id="count5">1560</span> Like
+                        </button>
                     </div>
                 </div>    
             </div>
         </div>
     </div>
-    <br><br><br><br><br><br><br><br><br>    </main>
+    <button class="loan_button" data-modal-target="#modal">calculate loans</button>
+    <div class="modal" id="modal">
+    <div class="modal-body">
+        <div class="loan_calculator">
+            <h4>calculate the monthly payment for your car</h4>
+        <p>car prize: <br>
+            <input type="text" id="price"><br><span id="price_error"></span>
+        </p>
+        <p>number of months: <br>
+                <input type="text" id="month"><br><span id="month_error"></span>
+        </p>
+        <button id="btn_calc">Calculate</button>
+        <p id="output"></p>
+    </div>
+    </div>
+    </div>
+    <div id="overlay"></div>
+    <br><br><br><br><br><br><br><br><br>
+</main>
     <footer>
         <div class="support">
             <div class="support-content">
@@ -293,6 +338,8 @@
                 </div>
             </div>
         </div>
-<footer>  
+        </div>
+    </footer>
+    <script src="./assets/JavaScript/main.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
 :root{
     --text: BLACK;
     --texti:white
@@ -24,7 +25,7 @@ background:rgb(202, 196, 196)
 #menu__toggle {
     opacity: 0;
     }
-    #menu__toggle:checked + .menu__btn > span {
+    #menu__toggle:checked  .menu__btn > span {
     transform: rotate(45deg);
     }
     #menu__toggle:checked + .menu__btn > span::before {
@@ -163,10 +164,98 @@ background:rgb(202, 196, 196)
         border: none;
         border-bottom:2px solid black ;
     }
+    .like__btn,.like__btn1,.like__btn2,.like__btn3,.like__btn4,.like__btn5 {
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: black;
+        background-color: rgb(112, 107, 107);
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 200ms ease-in-out;
+        border-radius: 10px;
+        z-index: 10;
+        background-color:transparent;
+        width: 800px;
+        height: 1000px;
+        max-width: 80%;
+
+      }
+      
+      .modal.active {
+        transform: translate(-50%, -50%) scale(1);
+        
+      }
+      .modal-body {
+        padding: 10px 15px;
+      }
+      
+      #overlay {
+        position: fixed;
+        opacity: 0;
+        transition: 200ms ease-in-out;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5);
+        pointer-events: none;
+      }
+      
+      #overlay.active {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .loan_calculator{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%);
+        padding: 10px;
+        width: 70%;
+
+        background: rgb(230, 204, 204);
+        border-radius: 5px;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+    .loan_calculator h4{
+      font-size: larger;
+    }
+    .loan_button{
+      border: 0ch;
+      background-color: rgba(84, 89, 92, 0.726);
+      padding: 10px;
+      display: block;
+      cursor: pointer;
+    }
+    
+    input{
+        outline: none;
+        border: none;
+        padding: 5px;
+    }
+    #price , #month{
+      background-color: transparent;
+      border-bottom: 1px solid black;
+    }
+    #btn_calc{
+      border: 0ch;
+      padding: 10px;
+      display: block;
+      cursor: pointer;
+      background-color: rgba(41, 55, 68, 0.726);;
+    }
+    
 
 
 
-/* small */
+/* SMALL DEVICES */
 @media all and (max-width:700px)
 {
     header{
@@ -486,7 +575,7 @@ background:rgb(202, 196, 196)
     .support-content{
         padding: 60px 20px ;
         display:grid !important;
-        grid-template-columns: repeat(2,1fr) !important;
+        grid-template-columns: 1fr !important;
         background-color: black;
     }
     .support-content,ul li, a ,h2,span{
@@ -506,7 +595,7 @@ background:rgb(202, 196, 196)
         color: rgb(90, 83, 83);
     }
     }
-    /* medium */
+    /* MEDIUM DEVICES */
 @media all and (min-width:701px)and(max-width:1059px)
 {
 
@@ -655,8 +744,6 @@ background:rgb(202, 196, 196)
         border-bottom:2px solid black ;
     }
 }
-
-/* /HEADER */
 /* MAIN */
 .entry-text{
     text-align: center;
@@ -824,6 +911,7 @@ object-fit: contain;
 .support-info ul li a:hover{
     color: rgb(90, 83, 83);
 }
+/* LARGE DEVICES */
 @media all and (min-width:1060px){
   /* HEADER */
   #menu__toggle {
